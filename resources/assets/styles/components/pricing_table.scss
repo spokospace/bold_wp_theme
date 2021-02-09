@@ -1,0 +1,120 @@
+.section {
+  text-align: center;
+
+  &__heading {
+    color: $dark;
+    font-size: rem(35px);
+    font-weight: 500;
+    line-height: rem(50px);
+  }
+
+  &__description {
+    color: $dark-grey;
+    font-size: rem(16px);
+    line-height: rem(30px);
+  }
+}
+
+.pricing-table {
+  display: grid;
+
+  @include media-max($lg) {
+    grid-template-columns: 1fr;
+  }
+
+  @include media-min($lg) {
+    grid-template-columns: 1fr 1fr 1fr;
+  }
+
+  grid-gap: rem(50px);
+  margin-bottom: rem(130px);
+  margin-top: rem(60px);
+}
+
+.pricing-card {
+  background: #fff;
+  border-radius: rem(10px);
+  border: rem(2px) solid $light;
+  box-sizing: border-box;
+  text-align: center;
+  padding-bottom: rem(50px);
+
+
+  &:hover {
+    border: rem(2px) solid $toxic-green;
+  }
+
+  &__icon {
+    max-width: rem(145px);
+    margin-top: rem(79.63px);
+  }
+
+  &__name {
+    color: $dark;
+    font-size: rem(18px);
+    font-weight: 500;
+    line-height: rem(30px);
+  }
+
+  &__price {
+    color: $dark;
+    font-weight: 500;
+    line-height: rem(30px);
+    font-size: rem(25px);
+    text-align: center;
+  }
+
+  &__button {
+    border: rem(2px) solid $toxic-green;
+    width: rem(177.88px);
+    height: rem(45px);
+    line-height: rem(45px);
+    text-align: center;
+    color: $toxic-green;
+    display: block;
+    border-radius: rem(50px);
+    font-weight: 700;
+    background: #fff;
+    margin: rem(20px) auto 0 auto;
+
+    &:hover {
+      color: $dark;
+      background: $toxic-green;
+    }
+  }
+
+  ul {
+    list-style: none;
+    margin-left: rem(69.87px);
+    margin-right: rem(69.87px);
+
+    li {
+      position: relative;
+
+      &:before {
+        background-color: $green;
+        bottom: rem(3px);
+        content: "";
+        height: 50%;
+        left: rem(-15px);
+        position: absolute;
+        top: 50%;
+        transform-origin: left bottom;
+        transform: translateX(rem(10px)) rotate(-45deg);
+        width: rem(2px);
+      }
+
+      &:after {
+        background-color: $green;
+        bottom: rem(3px);
+        content: "";
+        height: rem(2px);
+        left: rem(-15px);
+        position: absolute;
+        transform-origin: left bottom;
+        transform: translateX(10px) rotate(-45deg);
+        width: rem(15px);
+      }
+    }
+  }
+}

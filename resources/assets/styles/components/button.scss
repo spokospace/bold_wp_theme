@@ -1,0 +1,30 @@
+/**
+ * Button
+ */
+
+.wp-block-button {
+  &__link {
+    // font-size: $btn-font-size;
+    // line-height: $btn-line-height;
+    // padding-bottom: $btn-padding-y;
+    // padding-left: $btn-padding-x;
+    // padding-right: $btn-padding-x;
+    // padding-top: $btn-padding-y;
+
+    &:hover {
+      text-decoration: none;
+    }
+  }
+
+  &.is-style-outline {
+    .wp-block-button__link {
+      color: red;
+    }
+  }
+
+  &.is-style-solid {
+    .wp-block-button__link {
+      color: blue;
+    }
+  }
+}

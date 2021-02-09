@@ -1,0 +1,43 @@
+/**
+ * Global
+ */
+
+html,
+body {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: Rubik;
+  font-style: normal;
+  font-weight: normal;
+  background: #fff;
+}
+
+a {
+  color: $dark;
+  text-decoration: none;
+}
+
+.container {
+  margin-left: auto;
+  margin-right: auto;
+  width: 100%;
+  max-width: fill-available;
+  padding-left: 15px;
+  padding-right: 15px;
+
+  @include media-min($lg) {
+    max-width: rem(1208px);
+  }
+}
+
+button {
+
+  &:focus,
+  &:active {
+    outline: none;
+    box-shadow: none;
+  }
+}
